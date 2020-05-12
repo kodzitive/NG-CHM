@@ -408,6 +408,7 @@ NgChm.UHM.hlp = function(e, text, width, reverse, delay=1500) {
 		if (bodyElem) {
 			bodyElem.appendChild(helptext);
 		}
+		if (elemPos.left + width > window.innerWidth) { reverse = true }
 		if (reverse !== undefined) {
 			helptext.style.left = (elemPos.left - width) + 'px';
 		} else {
